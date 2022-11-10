@@ -1,0 +1,298 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --main-color:#f7f7f7;
+    --secondry-color:#343434
+}
+h1 , h2 , h3 , h4{
+    font-weight: 800;
+    color: var(--secondry-color);
+}
+i{
+    cursor: pointer;
+}
+
+.main{
+    z-index: 1;
+}
+.main::after{
+content: "";
+position: absolute;
+background-image: url(img/dots.png);
+background-repeat: repeat;
+width: 13rem;
+height: 2rem;
+top:30%;
+left: 50%;
+transform: translateX(-50%);
+z-index: -1;
+}
+/* START  nav  */
+.nav-item a , .nav-link .active{
+    color: black !important;   
+}
+.nav-link.active{
+position: relative;  
+}
+
+/* END  nav  */
+
+/* START  header  */
+header{
+    background-image: url(img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+header p::after{
+    content: "|";
+    animation-name: write;
+    animation-duration: 3s;
+animation-iteration-count: infinite
+}
+@keyframes write{
+    0%{  content: "d|"}
+    3%{  content: "de|"}
+    6%{  content: "des|"}
+    9%{  content: "desi|"}
+    12%{  content: "desig|"}
+    15%{  content: "design|"}
+    18%{  content: "designe|"}
+    21%{  content: "designer|"}
+    24%{  content: "designe|"}
+    27%{  content: "design|"}
+    30%{  content: "desig|"}
+    33%{  content: "desi|"}
+    36%{  content: "des"}
+    39%{  content: "de|"}
+    42%{  content: "d|"}
+    45%{  content: "|"}
+    48%{  content: "d|"}
+    51%{  content: "de|"}
+
+    54%{  content: "dev|"}
+    57%{  content: "deve|"}
+    60%{  content: "devel|"}
+    63%{  content: "develo|"}
+    66%{  content: "develop|"}
+    69%{  content: "develope|"}
+    72%{  content: "developer|"}
+    75%{  content: "developer|"}
+    78%{  content: "develope|"}
+    82%{  content: "develop|"}
+    85%{  content: "develo"}
+    88%{  content: "devel|"}
+    91%{  content: "deve|"}
+    94%{  content: "dev|"}
+    96%{  content: "de|"}
+    98%{  content: "d|"}
+    100%{  content: "|"}
+ 
+}
+
+header .icon i{
+    background-color: rgba(0, 0, 0, .5);
+    padding: .6rem .6rem;
+    border-radius: 50%;
+}
+/* END  header  */
+
+/* START about   */
+.about .skill .progress{
+    height: 1.6rem;
+}
+
+.about .buttons .btn-first{
+    background-color: black;
+    color: white;
+    transition: all .5s;
+}
+.about .buttons .btn-first:hover{
+    background-color: transparent;
+    color: black;
+}
+.about .buttons .btn-second{
+    transition: all .5s;
+
+}
+.about .buttons .btn-second:hover{
+    background-color: black;
+    color: white;
+}
+.about .img{
+    z-index: 1;
+}
+.about .img::after{
+    content: "";
+background-image: url(img/dots.png);
+background-repeat: repeat;
+    position: absolute;
+width: 80%;
+height: 90%;
+left: -2rem;
+top: 15%;
+z-index: -1;
+}
+/* END  about  */
+
+/* START  Services.  */
+.Services{
+    background-color: var(--main-color);
+}
+.Services .serv .icon{
+    color: var(--secondry-color);
+    margin-bottom: 1rem;
+    background-color: var(--main-color);
+    width: 5rem;
+    height: 5rem;
+    font-size: 2rem;
+    border-radius: 50%;
+transition: all .5s;
+}
+.Services .serv .icon:hover{
+    color: white;
+    background-color: black;
+    
+
+}
+/* END   Services. */
+
+/* START portfolio   */
+.portfolio .nav-tabs .nav-link{
+    border: none;
+    background-color: transparent;
+}
+.portfolio .nav-tabs{
+    border: none;
+}
+.portfolio .nav-tabs .nav-link.active::after{
+   width:70% ;
+   right: 100%;
+}
+.portfolio .nav-tabs .nav-link{
+    position: relative;
+}
+ .portfolio   .nav-tabs .nav-link::after{
+        content: "";
+        width: 0%;
+        height: .1rem;
+        left: 15%;
+        background-color: black;
+        position: absolute;
+        transition: all .5s;
+top: 100%;
+transform: translateX(0);
+    }
+.portfolio .overlay{
+    top: 10%;
+    background-color: rgba(255, 255, 255, .8);
+opacity: 0;  
+  transition: all .6s;
+}
+.portfolio .overlay p{
+transform: translateY(0rem);
+transition: all .5s;
+}
+.portfolio .img:hover .overlay{
+top: 0;
+opacity: 100%;    
+}
+.portfolio .img:hover .overlay p{
+    transform: translateY(1rem)
+    }
+.portfolio .icon{
+    color: white;
+    margin-bottom: 1rem;
+    background-color: black;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    border-radius: 50%;
+transition: all .5s;
+}
+.portfolio .icon:hover {
+    color: black;
+    background-color: white;
+}
+/* END portfolio   */
+
+/* START testimonials   */
+.testimonials{
+    background-color: var(--main-color);
+}
+.carousel-dark .carousel-indicators [data-bs-target]{
+border-radius: 50%;
+height:.6rem;
+width: .6rem;
+margin: .3rem;
+background-color: var(--secondry-color) !important;
+}
+/* END  testimonials  */
+
+/* START work   */
+.work .icon{
+color: var(--secondry-color);
+font-size: 2rem;
+margin-bottom: 1rem;
+}
+.work .work-number{
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: .5rem;
+}
+/* end work */
+
+/* START blog */
+.blog{
+    background-color: var(--main-color);
+}
+.blog .card img{
+    transition: all 1s;
+
+}
+.card-img{
+    overflow: hidden;
+
+}
+.blog .card:hover img{
+    transform: scale(1.2);
+}
+/* end blog */
+
+
+/* START Contact */
+.contact  .icon{
+    color: var(--secondry-color);
+    margin-bottom: 1rem;
+    background-color: var(--main-color);
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    border-radius: 50%;
+transition: all .5s;
+}
+.contact  .icon:hover{
+    color: white;
+    background-color: black;
+    
+
+}
+.contact input , .contact textarea{
+background-color: var(--main-color);
+color: var(--secondry-color);
+border: none;
+}
+.contact .submit{
+        background-color: black;
+        color: white;
+        transition: all .5s;
+        padding: .5rem 3rem;
+        
+    }
+    .contact .submit:hover{
+        background-color: transparent;
+        color: black;
+    }
+  /* end Contact */
